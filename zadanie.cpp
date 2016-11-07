@@ -94,8 +94,35 @@ int v( const std::string &pWorld )
         }
         Sleep(4000);
     }
+
+    int poziom;
+    {
+        if(y == 0)
+            poziom = 4;
+        if(y == 1)
+            poziom = 3;
+        if(y == 2)
+            poziom = 2;
+        if(y == 3)
+            poziom = 1;
+        if(y == 4)
+            poziom = 0;
+        if(y == 5)
+            poziom = -1;
+        if(y == 6)
+            poziom = -2;
+        if(y == 7)
+            poziom = -3;
+        if(y == 8)
+            poziom = -4;
+    }
+
     cout << "Pozycja koncowa: " << mapa[y][x] << endl;
-    cout << "Pierwszy znaleziony skarb dla N = " << N << endl;
+    cout << "Poziom: " << poziom << endl;
+        if(N==0)
+        cout << "Nie znaleziono skarbu!" << endl;
+        else
+            cout << "Pierwszy znaleziony skarb dla N = " << N << endl;
 }
 
 int main()
